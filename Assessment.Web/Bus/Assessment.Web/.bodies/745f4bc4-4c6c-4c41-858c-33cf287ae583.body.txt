@@ -1,0 +1,1 @@
+<?xml version="1.0"?><CalculationCommand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.net/Assessment.Web.Infrastructure"><HeaderId>0</HeaderId><Filename>C:\deploy\Evolve\Evolve\Assessment.Web\wwwroot\install.txt</Filename></CalculationCommand>
