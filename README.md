@@ -13,7 +13,7 @@ These instructions serves as a guide to getting the CES Solution up and running 
 
 ### Get Source Code
 Pull latest source code from the repository
-  > https://kohde.visualstudio.com/DefaultCollection/Standard%20Bank/_git/STB038-ChargebackEscalationsSystem
+  > https://github.com/cebolamadlaba/Evolve.git
   
 # Database Migration Commands
 
