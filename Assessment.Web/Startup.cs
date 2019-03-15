@@ -1,5 +1,6 @@
 using Assessment.Web.Data;
 using Assessment.Web.Infrastructure;
+using Assessment.Web.Views;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http.Features;
@@ -28,6 +29,8 @@ namespace Assessment.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IViewCalculationHeaders, ViewCalculationHeaders>();
+            services.AddScoped<IViewCalculationResults, ViewCalculationResults>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             // In production, the Angular files will be served from this directory

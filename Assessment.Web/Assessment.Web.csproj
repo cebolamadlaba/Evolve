@@ -28,7 +28,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\home\models\CalculationHeaders.ts" />
+    <None Remove="ClientApp\src\app\home\models\CalculationResults.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\NewFolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\home\models\CalculationHeaders.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\home\models\CalculationResults.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

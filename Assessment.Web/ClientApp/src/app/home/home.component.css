@@ -1,0 +1,47 @@
+.header-container {
+  padding-top: 20px;
+}
+
+
+.request-widget .request-widget-heading {
+  background-color: #18326f !important;
+  border-bottom: none;
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.line-item {
+  display: inline-block;
+  background-color: aliceblue;
+  color: black;
+ 
+}
+
+.line-item:hover {
+    background-color: lightblue;
+}
+
+.count {
+    float: right;
+  }
+
+.description{
+  float:left;
+}
+
+.header-row {
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #808080;
+  border: 1px solid transparent;
+  color: #fff !important;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+

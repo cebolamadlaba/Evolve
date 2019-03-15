@@ -1,6 +1,54 @@
-<h1>Upload file</h1>
-
-<div class="form-group col-md-4">
-  <label for="listFile">Select File</label>
-  <input id="listFile" type="file" name="listFile" class="form-control" (change)="handleFileInput($event.target.files)">
+<div class="row">
+  <h1 class="col-md-9">Upload file</h1>
+  <div class="form-group col-md-4" style="height:45px">
+    <label for="listFile">Select File</label>
+    <input id="listFile" type="file" name="listFile" class="form-control" (change)="handleFileInput($event.target.files)">
+  </div>
 </div>
+
+<div class="col-md-12 row header-container">
+  <div class="panel panel-default request-widget">
+    <div class="panel-heading request-widget-heading">Headers Files</div>
+    <div class="panel-body request-widget-body">
+      <div class="row">
+        <div class="col-md-6 header-row" *ngFor="let calcHeader of calculationHeadersRequests">
+          <div class="line-item col-md-9" (click)="calculationResultsList(calcHeader.id)">
+            <div class="description col-md-6">Name: {{calcHeader.fileName}}</div><div class="count col-md-6">Status: {{calcHeader.status}} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-12 row header-container">
+  <table mdbTable class="z-depth-1">
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements; let i = index" scope="col">
+          {{head}}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let el of elements; let i = index">
+        <th *ngIf="i+1 >= firstItemIndex && i < lastItemIndex" scope="row">{{el.formular}}</th>
+        <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.inputA}}</td>
+        <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.inputB}}</td>
+        <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.inputC}}</td>
+        <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.result}}</td>
+        <td *ngIf="i+1 >= firstItemIndex && i < lastItemIndex">{{el.message}}</td>
+      </tr>
+    </tbody>
+    <tfoot class="grey lighten-5 w-100">
+      <tr>
+        <td colspan="4">
+          <mdb-table-pagination (nextPageClick)="onNextPageClick($event)" (previousPageClick)="onPreviousPageClick($event)">
+          </mdb-table-pagination>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+

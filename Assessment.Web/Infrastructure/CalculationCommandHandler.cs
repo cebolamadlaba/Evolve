@@ -32,7 +32,6 @@ namespace Assessment.Web.Infrastructure
                
                 catch (Exception ex)
                 {
-                    //add the line info
                     errors.Add(new CalculationResult()
                     {
                         Message = ex.Message,
@@ -52,7 +51,7 @@ namespace Assessment.Web.Infrastructure
 
             //Bulk perfoms better for large records
             _context.BulkInsert(result.Select(r => new CalculationResult { CalculationHeaderId = message.HeaderId,
-                Formular = r.Formula,InputA = r.A , InputB =r.B,InputC = r.C , Result = r.Result
+                Formular = r.Formula,InputA = r.A , InputB =r.B,InputC = r.C , Result = Math.Round(r.Result,2)
             }).ToList());
 
             if(errors.Any()){

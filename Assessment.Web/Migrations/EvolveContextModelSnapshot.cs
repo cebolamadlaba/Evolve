@@ -56,6 +56,8 @@ namespace Assessment.Web.Migrations
 
                     b.Property<double>("InputC");
 
+                    b.Property<string>("Message");
+
                     b.Property<double>("Result");
 
                     b.HasKey("Id");
