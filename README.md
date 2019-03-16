@@ -7,7 +7,7 @@ This repository is configured and used for Asp.net Core Angular development.
 
 ## Purpose of the document
 
-These instructions serves as a guide to getting the CES Solution up and running on your development machine.
+These instructions serves as a guide to getting the Evolve Assesment solution up and running on your development machine.
 
 ## Getting Started
 
@@ -15,6 +15,13 @@ These instructions serves as a guide to getting the CES Solution up and running 
 Pull latest source code from the repository
   > https://github.com/cebolamadlaba/Evolve.git
   
+#Packages
+
+`"npm install"`
+
+>Evolve\Assessment.Web\ClientApp
+
+
 # Database Migration Commands
 
 `Add-Migration "<comments>"`
@@ -30,6 +37,3 @@ Pull latest source code from the repository
 `Remove-Migration`
 > Sometimes you add a migration and realize you need to make additional changes to your EF Core model before applying it. To remove the last migration, use this command
 
-# Front-end Icons
-- [Line-Awesome](https://icons8.com/line-awesome)
-- [Font-Awesome](https://fontawesome.com)

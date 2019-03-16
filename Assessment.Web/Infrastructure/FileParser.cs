@@ -28,7 +28,7 @@ namespace Assessment.Web.Infrastructure
         {
             var formular1regex = new Regex("A x B / C");
             var formular2regex = new Regex("A mod B x C");
-            var formular3regex = new Regex(@"A^C - √B x C");
+            var formular3regex = new Regex("A^C - √B x C");
 
             if(formular1regex.IsMatch(formula))
             {
